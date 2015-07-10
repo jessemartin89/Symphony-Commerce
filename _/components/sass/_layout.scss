@@ -119,14 +119,20 @@ $desktop				: 1024px;
     margin-top:177px;
     &.prev{
       float:left;
-      margin-left:70px;
+      margin-left:20px;
+      @include at-breakpoint($large){
+        margin-left:70px;
+      }//large
       img{
         @include transform(rotate(180deg));
       } //img
     } //div.prev
     &.next{
       float:right;
-      margin-right:70px;
+      margin-right:20px;
+      @include at-breakpoint($large){
+        margin-right:70px;
+      }//large
     } //div.next
   }//div
 } //#slider-container
@@ -195,7 +201,7 @@ $desktop				: 1024px;
   } //bottom-gap
 } //main-content
 #footer{
-  padding:20px 0 40px;
+  padding:20px 0px 40px;
   border-bottom:2px solid #F0F2EF;
   #social{
     background-color:#F0F2EF;
@@ -214,13 +220,14 @@ $desktop				: 1024px;
   h5{
     font-weight:$bold;
     margin-bottom:10px;
-  }
+  } //h5
   div#about, div#need-help, div#why-us{
-    @include at-breakpoint($medium){
-      float:left;
-      margin-right:80px;
+    margin-bottom:25px;
+    @include at-breakpoint($large){
       margin-bottom:0;
-    } //medium
+      max-width:200px;
+    } //large
+    float:left;
     width:30%;
     margin-right:20px;
     li{
@@ -232,11 +239,31 @@ $desktop				: 1024px;
       } //a
     } //li
   } //about, need-help, why-us
+  div#about{
+    margin-left:10px;
+    @include at-breakpoint($large){
+      margin-left:0;
+    } //large
+  } //about
+  div#need-help{
+    width:24%;
+    @include at-breakpoint($large){
+      width:30%;
+    }//large
+  } //need-help
+  div#why-us{
+    margin-right:10px;
+    @include at-breakpoint($large){
+      margin-right:20px;
+    } //large
+  } //why-us
   div#stay-connected{
     clear:left;
-    @include at-breakpoint($medium){
+    margin-left:10px;
+    @include at-breakpoint($large){
       clear:none;
-    }
+      margin-left:0;
+    }//large
     input{
       padding: 10px;
       &.connected-email {
