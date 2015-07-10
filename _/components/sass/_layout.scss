@@ -9,7 +9,7 @@ $grid-padding: 10px;
 
 $small					: 320px;
 $medium					: 480px;
-$large					: 768px;
+$large					: 780px;
 $desktop				: 1024px;
 
 #shipping-header{
@@ -47,16 +47,27 @@ $desktop				: 1024px;
   h1#branding{
     font-family: 'Cinzel', serif;
     font-size:30px;
-    @include at-breakpoint($medium){
+    margin-left:20px;
+    margin-bottom:5px;
+    @include at-breakpoint($large){
+      width:180px;
       font-size:48px;
-    }
+      margin-left:0;
+      margin-bottom:0;
+    } //medium
     letter-spacing: 2px;
-    width:180px;
+    width:130px;
     float:left;
     margin-right:20px;
   } //h1#branding
   div.menu{
-    @include span-columns(5,12);
+    margin-left:10px;
+    clear:both;
+    @include at-breakpoint($large){
+      @include span-columns(5,12);
+      margin-left:0;
+      clear:none;
+    }
     margin-top:13px;
     ul#main-menu{
       li.nav-link{
@@ -73,11 +84,18 @@ $desktop				: 1024px;
   div#your-cart{
     @include border-radius(5px);
     border: 1px solid #E1E0DE;
-    float:right;
+    float:left;
+    margin-left:20px;
+    margin-top:10px;
+    @include at-breakpoint($large){
+      float:right;
+      margin-left:0;
+      margin-top:0;
+    } //medium
     div{
       display: table-cell;
       vertical-align: middle;
-    }
+    } //div
     #bag{
       width:20px;
       padding:5px 8px;
@@ -129,10 +147,20 @@ $desktop				: 1024px;
   #info-container{
     padding:20px 0 40px;
     .thirds{
+      @include at-breakpoint($medium){
+        float:left;
+        margin-right:40px;
+        width:30%;
+        &:last-of-type{margin-right:0px;}
+        margin-bottom:0;
+      }
+      width:60%;
+      margin:0 auto 45px;
       text-align: center;
       .placeholder{
         height:205px;
         width:295px;
+        max-width:100%;
         background-color:#F0F2EF;
         @include border-radius(3px);
       } //placeholder
@@ -146,6 +174,7 @@ $desktop				: 1024px;
         font-weight:$light;
         font-size:14px;
         width:249px;
+        max-width:100%;
         margin:0 auto;
       }//p
       a{
@@ -175,6 +204,7 @@ $desktop				: 1024px;
     p{
       text-transform:uppercase;
       font-size: 17px;
+      line-height:20px;
       font-weight: $bold;
       letter-spacing:1px;
       a{color:#F06B20;}
@@ -185,8 +215,13 @@ $desktop				: 1024px;
     margin-bottom:10px;
   }
   div#about, div#need-help, div#why-us{
-    @include span-columns(2, 12);
-    margin-right:80px;
+    @include at-breakpoint($medium){
+      float:left;
+      margin-right:80px;
+      margin-bottom:0;
+    } //medium
+    width:30%;
+    margin-right:20px;
     li{
       list-style:none;
       a{
@@ -197,6 +232,10 @@ $desktop				: 1024px;
     } //li
   } //about, need-help, why-us
   div#stay-connected{
+    clear:left;
+    @include at-breakpoint($medium){
+      clear:none;
+    }
     input{
       padding: 10px;
       &.connected-email {

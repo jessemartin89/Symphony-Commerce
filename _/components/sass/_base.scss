@@ -8,11 +8,4 @@ body{
   font-family: $primaryFont;
 }
 
-.thirds{
-  width:30%;
-  float:left;
-  margin-right:40px;
-  &:last-of-type{margin-right:0px;}
-}
-
 a{text-decoration:none;}
