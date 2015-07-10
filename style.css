@@ -339,7 +339,7 @@ a {
 }
 /* line 147, _/components/sass/_layout.scss */
 #main-content #info-container {
-  padding: 20px 0 40px;
+  padding: 20px 10px 40px;
 }
 /* line 149, _/components/sass/_layout.scss */
 #main-content #info-container .thirds {
@@ -347,7 +347,7 @@ a {
   margin: 0 auto 45px;
   text-align: center;
 }
-@media (min-width: 480px) {
+@media (min-width: 780px) {
   /* line 149, _/components/sass/_layout.scss */
   #main-content #info-container .thirds {
     float: left;
@@ -365,19 +365,20 @@ a {
   height: 205px;
   width: 295px;
   max-width: 100%;
+  margin: 0 auto;
   background-color: #F0F2EF;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 167, _/components/sass/_layout.scss */
+/* line 168, _/components/sass/_layout.scss */
 #main-content #info-container .thirds h5 {
   text-transform: uppercase;
   margin: 11px 0;
   font-size: 13px;
   font-weight: 700;
 }
-/* line 173, _/components/sass/_layout.scss */
+/* line 174, _/components/sass/_layout.scss */
 #main-content #info-container .thirds p {
   font-weight: 300;
   font-size: 14px;
@@ -385,7 +386,7 @@ a {
   max-width: 100%;
   margin: 0 auto;
 }
-/* line 180, _/components/sass/_layout.scss */
+/* line 181, _/components/sass/_layout.scss */
 #main-content #info-container .thirds a {
   display: inline-block;
   background-color: #000000;
@@ -397,25 +398,25 @@ a {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 191, _/components/sass/_layout.scss */
+/* line 192, _/components/sass/_layout.scss */
 #main-content #bottom-gap {
   height: 303px;
   background-color: #F0F2EF;
 }
 
-/* line 196, _/components/sass/_layout.scss */
+/* line 197, _/components/sass/_layout.scss */
 #footer {
   padding: 20px 0 40px;
   border-bottom: 2px solid #F0F2EF;
 }
-/* line 199, _/components/sass/_layout.scss */
+/* line 200, _/components/sass/_layout.scss */
 #footer #social {
   background-color: #F0F2EF;
   padding: 30px 0;
   text-align: center;
   margin-bottom: 30px;
 }
-/* line 204, _/components/sass/_layout.scss */
+/* line 205, _/components/sass/_layout.scss */
 #footer #social p {
   text-transform: uppercase;
   font-size: 17px;
@@ -423,53 +424,53 @@ a {
   font-weight: 700;
   letter-spacing: 1px;
 }
-/* line 210, _/components/sass/_layout.scss */
+/* line 211, _/components/sass/_layout.scss */
 #footer #social p a {
   color: #F06B20;
 }
-/* line 213, _/components/sass/_layout.scss */
+/* line 214, _/components/sass/_layout.scss */
 #footer h5 {
   font-weight: 700;
   margin-bottom: 10px;
 }
-/* line 217, _/components/sass/_layout.scss */
+/* line 218, _/components/sass/_layout.scss */
 #footer div#about, #footer div#need-help, #footer div#why-us {
   width: 30%;
   margin-right: 20px;
 }
 @media (min-width: 480px) {
-  /* line 217, _/components/sass/_layout.scss */
+  /* line 218, _/components/sass/_layout.scss */
   #footer div#about, #footer div#need-help, #footer div#why-us {
     float: left;
     margin-right: 80px;
     margin-bottom: 0;
   }
 }
-/* line 225, _/components/sass/_layout.scss */
+/* line 226, _/components/sass/_layout.scss */
 #footer div#about li, #footer div#need-help li, #footer div#why-us li {
   list-style: none;
 }
-/* line 227, _/components/sass/_layout.scss */
+/* line 228, _/components/sass/_layout.scss */
 #footer div#about li a, #footer div#need-help li a, #footer div#why-us li a {
   color: #000000;
   font-weight: 300;
   font-size: 13px;
 }
-/* line 234, _/components/sass/_layout.scss */
+/* line 235, _/components/sass/_layout.scss */
 #footer div#stay-connected {
   clear: left;
 }
 @media (min-width: 480px) {
-  /* line 234, _/components/sass/_layout.scss */
+  /* line 235, _/components/sass/_layout.scss */
   #footer div#stay-connected {
     clear: none;
   }
 }
-/* line 239, _/components/sass/_layout.scss */
+/* line 240, _/components/sass/_layout.scss */
 #footer div#stay-connected input {
   padding: 10px;
 }
-/* line 241, _/components/sass/_layout.scss */
+/* line 242, _/components/sass/_layout.scss */
 #footer div#stay-connected input.connected-email {
   border: 1px solid #F0F2EF;
   width: 230px;
@@ -484,7 +485,7 @@ a {
   -webkit-border-bottom-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-/* line 250, _/components/sass/_layout.scss */
+/* line 251, _/components/sass/_layout.scss */
 #footer div#stay-connected input[type="submit"] {
   border: 1px solid #D35E1C;
   margin-left: -1px;
@@ -501,15 +502,15 @@ a {
   -webkit-border-bottom-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-/* line 260, _/components/sass/_layout.scss */
+/* line 261, _/components/sass/_layout.scss */
 #footer div#stay-connected input[type="submit"]:hover {
   cursor: pointer;
 }
-/* line 265, _/components/sass/_layout.scss */
+/* line 266, _/components/sass/_layout.scss */
 #footer div#stay-connected > div {
   margin-top: 10px;
 }
-/* line 267, _/components/sass/_layout.scss */
+/* line 268, _/components/sass/_layout.scss */
 #footer div#stay-connected > div img {
   margin-right: 20px;
 }

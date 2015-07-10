@@ -54,7 +54,7 @@ $desktop				: 1024px;
       font-size:48px;
       margin-left:0;
       margin-bottom:0;
-    } //medium
+    } //large
     letter-spacing: 2px;
     width:130px;
     float:left;
@@ -67,7 +67,7 @@ $desktop				: 1024px;
       @include span-columns(5,12);
       margin-left:0;
       clear:none;
-    }
+    } //large
     margin-top:13px;
     ul#main-menu{
       li.nav-link{
@@ -91,7 +91,7 @@ $desktop				: 1024px;
       float:right;
       margin-left:0;
       margin-top:0;
-    } //medium
+    } //large
     div{
       display: table-cell;
       vertical-align: middle;
@@ -145,15 +145,15 @@ $desktop				: 1024px;
     } //h4
   } //div.promotion
   #info-container{
-    padding:20px 0 40px;
+    padding:20px 10px 40px;
     .thirds{
-      @include at-breakpoint($medium){
+      @include at-breakpoint($large){
         float:left;
         margin-right:40px;
         width:30%;
         &:last-of-type{margin-right:0px;}
         margin-bottom:0;
-      }
+      }//large
       width:60%;
       margin:0 auto 45px;
       text-align: center;
@@ -161,6 +161,7 @@ $desktop				: 1024px;
         height:205px;
         width:295px;
         max-width:100%;
+        margin:0 auto;
         background-color:#F0F2EF;
         @include border-radius(3px);
       } //placeholder
