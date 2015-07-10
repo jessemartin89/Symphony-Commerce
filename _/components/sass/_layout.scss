@@ -1,0 +1,233 @@
+// Susy setup --------------------------------------------
+// A Fluid Grid based on 960gs
+$total-columns: 12;
+$column-width: 60px;
+$gutter-width: 20px;
+$grid-padding: 10px;
+
+@include border-box-sizing;
+
+$small					: 320px;
+$medium					: 480px;
+$large					: 768px;
+$desktop				: 1024px;
+
+#shipping-header{
+  @include background-image(linear-gradient(#ffffff, #eeeeee));
+  max-height: 33px;
+  padding: 10px 0;
+}
+//shipping-header
+
+.layout{
+  @include container;
+  margin:0 auto;
+}
+
+#shipping-header{
+  text-transform: uppercase;
+  font-family:'arial';
+  font-size:10px;
+  span.free-shipping{
+    letter-spacing: 1px;
+    font-weight: $light;
+    &::before{
+      content: url("/assets/truck.png");
+      margin-right:5px;
+    } //free-shipping::before
+  }//free-shipping
+  span#account{
+    float:right;
+  } //account
+} //shipping-header
+
+#header{
+  text-transform: uppercase;
+  padding:20px 0;
+  h1#branding{
+    font-family: 'Cinzel', serif;
+    font-size:30px;
+    @include at-breakpoint($medium){
+      font-size:48px;
+    }
+    letter-spacing: 2px;
+    width:180px;
+    float:left;
+    margin-right:20px;
+  } //h1#branding
+  div.menu{
+    @include span-columns(5,12);
+    margin-top:13px;
+    ul#main-menu{
+      li.nav-link{
+        display:inline-block;
+        a{
+          color:#000000;
+          font-size:14px;
+          padding:0 10px;
+        } //a
+      } //li.nav-link
+    }//ul#main-menu
+  } //div.menu
+
+  div#your-cart{
+    @include border-radius(5px);
+    border: 1px solid #E1E0DE;
+    float:right;
+    div{
+      display: table-cell;
+      vertical-align: middle;
+    }
+    #bag{
+      width:20px;
+      padding:5px 8px;
+    } //#bag
+    #bag-contents{
+      font-size:10px;
+      text-transform:uppercase;
+      background-color:#E1E0DE;
+      padding:10px;
+      letter-spacing:1px;
+      span{font-weight:$bold;}
+    }//#bag-contents
+  }//div#your-cart
+}//header
+
+#slider-container{
+  background-color:#F0F2EF;
+  height:467px;
+  position:relative;
+  div{
+    margin-top:177px;
+    &.prev{
+      float:left;
+      margin-left:70px;
+      img{
+        @include transform(rotate(180deg));
+      } //img
+    } //div.prev
+    &.next{
+      float:right;
+      margin-right:70px;
+    } //div.next
+  }//div
+} //#slider-container
+
+#main-content{
+  div.promotion{
+    text-align:center;
+    background-color: #F06B20;
+    padding:15px 0;
+    max-height: 50px;
+    h4{
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      font-size:12px;
+    } //h4
+  } //div.promotion
+  #info-container{
+    padding:20px 0 40px;
+    .thirds{
+      text-align: center;
+      .placeholder{
+        height:205px;
+        width:295px;
+        background-color:#F0F2EF;
+        @include border-radius(3px);
+      } //placeholder
+      h5{
+        text-transform:uppercase;
+        margin:11px 0;
+        font-size:13px;
+        font-weight: $bold;
+      }//h5
+      p{
+        font-weight:$light;
+        font-size:14px;
+        width:249px;
+        margin:0 auto;
+      }//p
+      a{
+        display:inline-block;
+        background-color: #000000;
+        color: #ffffff;
+        margin-top:20px;
+        padding: 5px 60px;
+        font-size:14px;
+        @include border-radius(3px);
+      } //a
+    } //thirds
+  } //info-container
+  #bottom-gap{
+    height:303px;
+    background-color:#F0F2EF;
+  } //bottom-gap
+} //main-content
+#footer{
+  padding:20px 0 40px;
+  border-bottom:2px solid #F0F2EF;
+  #social{
+    background-color:#F0F2EF;
+    padding:30px 0;
+    text-align:center;
+    margin-bottom:30px;
+    p{
+      text-transform:uppercase;
+      font-size: 17px;
+      font-weight: $bold;
+      letter-spacing:1px;
+      a{color:#F06B20;}
+    } //p
+  } //social
+  h5{
+    font-weight:$bold;
+    margin-bottom:10px;
+  }
+  div#about, div#need-help, div#why-us{
+    @include span-columns(2, 12);
+    margin-right:80px;
+    li{
+      list-style:none;
+      a{
+        color: #000000;
+        font-weight:$light;
+        font-size:13px;
+      } //a
+    } //li
+  } //about, need-help, why-us
+  div#stay-connected{
+    input{
+      padding: 10px;
+      &.connected-email {
+        border: 1px solid #F0F2EF;
+        width: 230px;
+        font-size: 13px;
+        letter-spacing:1px;
+        font-weight: $light;
+        font-family: 'Lato';
+        @include border-left-radius();
+      } //connected-email
+      &[type="submit"]{
+        border: 1px solid #D35E1C;
+        margin-left:-1px;
+        background-color:#F06B20;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: $bold;
+        font-size:13px;
+        letter-spacing:1px;
+        @include border-right-radius();
+        &:hover{
+          cursor:pointer;
+        }//submit:hover
+      }//input[type="submit"]
+    } //input
+    &>div{
+      margin-top:10px;
+      img{
+        margin-right:20px;
+      } //img
+    } //stay-connected > div
+  }//stay-connected
+} //footer
